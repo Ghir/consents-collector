@@ -1,0 +1,42 @@
+<div class="container">
+  <mat-card>
+    <form [formGroup]="consentForm">
+
+      <div class="data">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput
+                 formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput
+                 formControlName="email" />
+        </mat-form-field>
+      </div>
+
+      <p>I agree to:</p>
+
+      <div class="consents-container"
+           formGroupName="consents">
+
+        <div class="consents-list">
+          <mat-checkbox color="primary"
+                        [formControlName]="consentTypes.NEWSLETTER">Receive Newsletters</mat-checkbox>
+          <mat-checkbox color="primary"
+                        [formControlName]="consentTypes.ADS">Be shown targeted ads</mat-checkbox>
+          <mat-checkbox color="primary"
+                        [formControlName]="consentTypes.STATISTICS">Contribute to anonymous visit statistics
+          </mat-checkbox>
+        </div>
+      </div>
+
+      <button mat-flat-button
+              [disabled]="consentForm.invalid"
+              (click)="submit()">Give Consent</button>
+
+    </form>
+  </mat-card>
+
+</div>

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  table {
+    width: 1000px;
+
+    tr {
+      height: 55px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="container">
+
+  <button mat-flat-button
+          (click)="previousPage()">
+    <span class="material-icons">
+      navigate_before
+    </span>
+    Previous page
+  </button>
+
+  <div class="center">
+    <button mat-flat-button
+            [color]="pageLink-1 === pageIndex ? 'primary' : 'basic'"
+            (click)="onPageLinkClick(pageLink - 1)"
+            *ngFor="let pageLink of pageLinks">{{ pageLink }}</button>
+  </div>
+
+  <button mat-flat-button
+          (click)="nextPage()">
+    Next page
+    <span class="material-icons">
+      navigate_next
+    </span>
+  </button>
+
+</div>

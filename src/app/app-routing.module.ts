@@ -1,8 +1,18 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { CollectedConsentsComponent } from './components/collected-consents/collected-consents.component';
+import { NewConsentComponent } from './components/new-consent/new-consent.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'new',
+    component: NewConsentComponent
+  },
+  {
+    path: 'collected',
+    component: CollectedConsentsComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
