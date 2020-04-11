@@ -5,7 +5,7 @@ import { NewConsentComponent } from './components/new-consent/new-consent.compon
 
 const routes: Routes = [
   {
-    path: 'new',
+    path: '',
     component: NewConsentComponent
   },
   {
