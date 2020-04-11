@@ -13,6 +13,7 @@ A simple dashboard to collect users data with a form. Contains form validation, 
 
 #### Running
 
+- `npm install`
 - `npm start`
 
 #### Technologies
