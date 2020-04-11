@@ -16,7 +16,7 @@ export class BackendInterceptor implements HttpInterceptor {
 
     if (request.method === 'POST' && request.url === 'http://localhost:4200/consents') {
       consentsMock.push(request.body as ConsentItem);
-      return;
+      return of(new HttpResponse({ status: 200, body: consentsMock }));
     }
 
     next.handle(request);
