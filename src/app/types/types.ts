@@ -4,7 +4,7 @@ export interface ConsentItem {
   consents: string[];
 }
 
-export enum consentTypes {
+export enum ConsentTypes {
   ADS = 'Be shown targeted ads',
   NEWSLETTER = 'Receive newsletter',
   STATISTICS = 'Contribute to anonymous visit statistics'

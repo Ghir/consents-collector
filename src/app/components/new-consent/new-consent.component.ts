@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { consentTypes } from 'src/app/types/types';
+import { ConsentTypes } from 'src/app/types/types';
 import { getConsentsArray, minSelectedValidator } from '../../helpers/utils';
 import { ApiService } from '../../services/api.service';
 
@@ -22,16 +22,16 @@ export class NewConsentComponent implements OnInit {
   ) { }
 
   consentForm: FormGroup;
-  consentTypes = consentTypes;
+  consentTypes = ConsentTypes;
 
   ngOnInit(): void {
     this.consentForm = this.fb.group({
       name: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
       consents: this.fb.group({
-        [consentTypes.NEWSLETTER]: this.fb.control(false),
-        [consentTypes.ADS]: this.fb.control(false),
-        [consentTypes.STATISTICS]: this.fb.control(false)
+        [ConsentTypes.NEWSLETTER]: this.fb.control(false),
+        [ConsentTypes.ADS]: this.fb.control(false),
+        [ConsentTypes.STATISTICS]: this.fb.control(false)
       })
     }, { validators: minSelectedValidator(MIN_CONSENTS) });
   }

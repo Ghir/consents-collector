@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { delay, map, tap } from 'rxjs/operators';
 import { ApiService } from '../../services/api.service';
 import { ConsentItem } from '../../types/types';
 
@@ -11,7 +11,7 @@ import { ConsentItem } from '../../types/types';
 })
 export class CollectedConsentsComponent implements OnInit {
 
-  constructor(private apiService: ApiService, ) { }
+  constructor(private apiService: ApiService, private cd: ChangeDetectorRef) { }
 
   displayedColumns = ['name', 'email', 'consents'];
   numPages: number;
@@ -23,6 +23,7 @@ export class CollectedConsentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.$consentList = this.apiService.getConsentsList().pipe(
+      delay(0),
       tap((list: ConsentItem[]) => {
         this.numPages = Math.ceil(list.length / this.pageSize);
       }));

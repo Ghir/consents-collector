@@ -1,29 +1,24 @@
-import { ConsentItem, consentTypes } from '../app/types/types';
+import { ConsentItem, ConsentTypes } from '../app/types/types';
 
 export const consentsMock: ConsentItem[] = [
   {
     name: 'Joe Smith',
     email: 'josmith@gmail.com',
-    consents: [consentTypes.ADS, consentTypes.STATISTICS, consentTypes.NEWSLETTER]
+    consents: [ConsentTypes.ADS, ConsentTypes.STATISTICS, ConsentTypes.NEWSLETTER]
   },
   {
     name: 'David Miller',
     email: 'davidmiller@gmail.com',
-    consents: [consentTypes.NEWSLETTER]
+    consents: [ConsentTypes.NEWSLETTER]
   },
   {
     name: 'Mary Wilson',
     email: 'marywilson@gmail.com',
-    consents: [consentTypes.STATISTICS, consentTypes.NEWSLETTER]
+    consents: [ConsentTypes.STATISTICS, ConsentTypes.NEWSLETTER]
   },
   {
     name: 'Patricia Williams',
     email: 'patriciawilliams@gmail.com',
-    consents: [consentTypes.ADS]
-  },
-  {
-    name: 'Joe Smith',
-    email: 'josmith@gmail.com',
-    consents: [consentTypes.ADS, consentTypes.STATISTICS]
+    consents: [ConsentTypes.ADS]
   }
 ]

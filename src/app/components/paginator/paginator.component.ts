@@ -18,9 +18,6 @@ export class PaginatorComponent implements OnChanges {
 
   ngOnChanges(): void {
     this.updatePageLinks();
-    setTimeout(() => {
-      this.cd.markForCheck();
-    });
   }
 
   nextPage(): void {
@@ -45,7 +42,7 @@ export class PaginatorComponent implements OnChanges {
     this.updatePageLinks();
   }
 
-  private updatePageLinks(): void {
+  updatePageLinks(): void {
     this.pageLinks = [];
     const [start, end] = this.calculateBoundaries();
 
@@ -59,6 +56,7 @@ export class PaginatorComponent implements OnChanges {
     let start = Math.max(0, Math.ceil(this.pageIndex - ((visiblePages) / 2)));
     const end = Math.min(this.numPages - 1, start + visiblePages - 1);
 
+    // for when approaching last pages
     const delta = this.paginationSize - (end - start + 1);
     start = Math.max(0, start - delta);
 
