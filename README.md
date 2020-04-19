@@ -1,4 +1,4 @@
-### Consents Collector
+## Consents Collector
 
 A simple dashboard to collect users data with a form. Contains form validation, custom pagination and mocking http calls with interceptors.
 
@@ -11,12 +11,12 @@ A simple dashboard to collect users data with a form. Contains form validation, 
 &nbsp;
 &nbsp;
 
-#### Running
+### Running
 
 - `npm install`
 - `npm start`
 
-#### Technologies
+### Technologies
 
 - Angular
 - Angular Material
