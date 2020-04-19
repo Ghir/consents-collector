@@ -14,7 +14,7 @@ export class PaginatorComponent implements OnChanges {
   pageIndex = 0;
   pageLinks: number[];
 
-  constructor(private cd: ChangeDetectorRef) { }
+  constructor() { }
 
   ngOnChanges(): void {
     this.updatePageLinks();

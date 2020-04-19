@@ -23,11 +23,11 @@
 
         <div class="consents-list">
           <mat-checkbox color="primary"
-                        [formControlName]="consentTypes.NEWSLETTER">Receive Newsletters</mat-checkbox>
+                        [formControlName]="consentTypes.NEWSLETTER">{{ consentTypes.NEWSLETTER }}</mat-checkbox>
           <mat-checkbox color="primary"
-                        [formControlName]="consentTypes.ADS">Be shown targeted ads</mat-checkbox>
+                        [formControlName]="consentTypes.ADS">{{ consentTypes.ADS }}</mat-checkbox>
           <mat-checkbox color="primary"
-                        [formControlName]="consentTypes.STATISTICS">Contribute to anonymous visit statistics
+                        [formControlName]="consentTypes.STATISTICS">{{ consentTypes.STATISTICS }}
           </mat-checkbox>
         </div>
       </div>

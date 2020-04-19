@@ -63,7 +63,5 @@ describe('PaginatorComponent', () => {
       done();
     });
     fixture.debugElement.queryAll(By.css('.center > button'))[2].nativeElement.click();
-
-    expect(component).toBeTruthy();
   });
 });

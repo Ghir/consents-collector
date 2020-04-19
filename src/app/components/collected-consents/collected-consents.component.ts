@@ -11,7 +11,7 @@ import { ConsentItem } from '../../types/types';
 })
 export class CollectedConsentsComponent implements OnInit {
 
-  constructor(private apiService: ApiService, private cd: ChangeDetectorRef) { }
+  constructor(private apiService: ApiService) { }
 
   displayedColumns = ['name', 'email', 'consents'];
   numPages: number;
